@@ -1,0 +1,5 @@
+package akka
+
+class AkkaHttpServer {
+
+}
