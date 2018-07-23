@@ -3,7 +3,9 @@ package akka
 import akka.actor._
 import akka.util.Timeout
 
+import scala.concurrent.Future
 import scala.concurrent.duration.DurationInt
+import scala.concurrent.ExecutionContext.Implicits.global
 
 class AkkaActorLearning {}
 
@@ -48,6 +50,9 @@ class SummingActor extends Actor {
       sum = sum + x
       if (sum == 50) Thread.sleep(10000)
       println(s"my state as sum is $sum")
+      Future{
+        println("Hello")
+      }
     // receives default message
     case _ => println("I don't know what are you talking about")
   }

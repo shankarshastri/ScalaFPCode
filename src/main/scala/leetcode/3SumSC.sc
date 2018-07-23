@@ -1,3 +1,4 @@
+
 //import scala.collection.immutable.TreeSet
 //
 //
@@ -29,6 +30,16 @@
 
 
 
+val x = Array[Array[Int]](Array[Int](0,0), Array[Int](1,0),Array[Int](2,0))
 
 
-Solutionz.reorderedPowerOf2(46)
+
+
+val elemMap = x.map(ele => (ele.head, ele.tail.head))
+for {
+  i <- elemMap.indices
+  j <- elemMap.indices
+  if i!=j
+} yield elemMap(i)
+
+
