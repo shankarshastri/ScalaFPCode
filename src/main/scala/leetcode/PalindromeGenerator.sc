@@ -27,7 +27,7 @@ def generateClosestPalindrome(str: String): String = {
 
 
 
-generateClosestPalindrome("100")
+generateClosestPalindrome("215")
 
 
 
@@ -47,3 +47,32 @@ object Solution {
     generateClosestPalindrome(n)
   }
 }
+
+
+
+//1,2,3,4,5,6,7,8,9
+//11,22,33,44,55,66,77,88,99
+//101, 111, 121, 131,141,151,
+//202
+//
+//def generateListOfPalindromes(s: BigInt, e: BigInt): List[BigInt] ={
+//
+//
+//}
+
+999 * 999
+
+
+def isPalindrome(x: Int) = {
+  x.toString == x.toString.reverse
+}
+
+val res =
+  for {
+    i <- 100 to 999
+    j <- i to 999
+    if i!=j && isPalindrome(i * j)
+  } yield i * j
+
+
+
