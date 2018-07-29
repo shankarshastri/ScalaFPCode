@@ -1,4 +1,4 @@
-
+import scala.annotation.tailrec
 //import scala.annotation.tailrec
 ////Given "abcabcbb", the answer is "abc", which the length is 3.
 ////
@@ -55,3 +55,36 @@
 //  }
 //func(x)
 //max
+
+def getAllFactors(n: BigInt): List[BigInt] = {
+  if(n.isProbablePrime(1)) List(n)
+  else {
+    (BigInt(1) :: ((BigInt(2) to BigInt(9))
+      .filter(n%_ == 0)
+      .flatMap(i => n/i :: i :: getAllFactors(n/i)).toList :+ n))
+      .sorted
+      .distinct
+  }
+}
+
+def gcd(a: BigInt, b: BigInt) = {
+//  GCD of 98 and 56 is 14
+  val a1 = getAllFactors(a)
+  val b1= getAllFactors(b)
+  b1.flatMap(x => a1.filter(x == _)).distinct.last
+}
+
+gcd(98,56)
+
+
+
+getAllFactors(12)
+getAllFactors(8)
+
+def gcd(a: Int, b: Int): Int = {
+  println(a, b)
+  if (a == 0) return b
+  gcd(b % a, a)
+}
+
+gcd(98,56)
