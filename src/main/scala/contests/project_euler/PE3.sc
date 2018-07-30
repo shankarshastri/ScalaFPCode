@@ -104,3 +104,9 @@ def loopWithResForBigInt[T](n: BigInt)(block: => T)(res: List[T] = List[T]()): L
 loopWithResForBigInt(10) {
   2
 }()
+
+
+import algorithm.SieveOfErastothene._
+
+
+sieveOfErastothenes(110000).length
