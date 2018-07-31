@@ -106,7 +106,8 @@ loopWithResForBigInt(10) {
 }()
 
 
-import algorithm.SieveOfErastothene._
 
-
-sieveOfErastothenes(110000).length
+  
+  SieveOfErastothene.sieveOfErastothenes(10)
+//val x = "110000"* 1000
+//BigInt(x)

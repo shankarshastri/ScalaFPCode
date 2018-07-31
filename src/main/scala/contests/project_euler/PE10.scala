@@ -1,13 +1,18 @@
 /**
   * @author ShankarShastri
-  *         Algorithm: SieveOfErastothene
+  *         Algorithm: PE10
   */
 
-package algorithm
+package contests.project_euler
 
+
+import scala.io.StdIn._
 import scala.annotation.tailrec
+import scala.concurrent.{Await, Future}
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration.DurationInt
 
-object SieveOfErastothene {
+object SieveOfErastotheneUtil {
   
   def loopForErastothenes(n: BigInt, index: BigInt,
                           map: Map[BigInt, Boolean]): Map[BigInt, Boolean] = {
@@ -16,7 +21,6 @@ object SieveOfErastothene {
     Map[BigInt, Boolean] = {
       
       val indexSq = (index * index) + mul * index
-      println(indexSq)
       if (indexSq <= n) {
         loopForErastonthenesHelper(map.updated(indexSq, false), mul + 1)
       } else map
@@ -47,7 +51,6 @@ object SieveOfErastothene {
                                   map: Map[BigInt, Boolean] =
                                   Map[BigInt, Boolean]().withDefaultValue(true)): List[BigInt] = {
       if (index <= sqroot(BigDecimal(n)) && map(index)) {
-        println(index)
         sieveOfErastothenesHelper(index + 1, loopForErastothenes(n, index, map))
       } else if (index <= sqroot(BigDecimal(n))) {
         sieveOfErastothenesHelper(index + 1, map)
@@ -57,8 +60,30 @@ object SieveOfErastothene {
     
     sieveOfErastothenesHelper()
   }
+}
+
+object PE10 {
+  import SieveOfErastotheneUtil._
+  
+  @tailrec
+  def loopWithResForBigInt[T](n: BigInt)(block: => T)(
+    res: List[T] = List[T]()): List[T] = {
+    n match {
+      case x: BigInt if x == BigInt(0) => res
+      case _                           => loopWithResForBigInt(n - 1)(block)(block :: res)
+    }
+  }
   
   def main(args: Array[String]): Unit = {
-    println(sieveOfErastothenes(10))
+    val t = readInt
+    val futu = Future {
+      sieveOfErastothenes(1000000)
+    }
+    val res = Await.result(futu, 5 second)
+    loopWithResForBigInt(t) {
+      val n = readInt
+      val sum = res.filter(_ <= n).sum
+      println(sum)
+    }()
   }
 }
