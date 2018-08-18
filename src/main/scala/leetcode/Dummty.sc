@@ -128,7 +128,7 @@ def quickSort(list:List[Int]): List[Int] = {
   if(list.length < 2) list
   else {
     val pivotElement = list(list.length/2)
-    quickSort(list.tail.filter(_ <= pivotElement)) ::: List(pivotElement) ::: quickSort(list.tail.filter(_ > pivotElement))
+    quickSort(list.filter(_ <= pivotElement))  ::: quickSort(list.filter(_ > pivotElement))
   }
 }
 quickSort(list)
