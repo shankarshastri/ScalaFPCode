@@ -76,13 +76,9 @@ object PE10 {
   
   def main(args: Array[String]): Unit = {
     val t = readInt
-    val futu = Future {
-      sieveOfErastothenes(1000000)
-    }
-    val res = Await.result(futu, 5 second)
     loopWithResForBigInt(t) {
       val n = readInt
-      val sum = res.filter(_ <= n).sum
+      val sum = sieveOfErastothenes(n).sum
       println(sum)
     }()
   }

@@ -5,7 +5,7 @@ package design_patterns
 // It is much more simplified in Scala than it is in an object-oriented language such as Java.
 
 
-private case class Fruit ()
+case class Fruit ()
 object Fruit {
   def createFruit = Fruit()
 }
