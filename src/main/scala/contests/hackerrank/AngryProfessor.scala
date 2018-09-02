@@ -1,3 +1,13 @@
+/**
+  * @author ShankarShastri
+  *         Algorithm: AngryProfessor (https://www.hackerrank.com/challenges/angry-professor/problem)
+  */
+
+package contests.hackerrank
+
+import scala.io.StdIn._
+import scala.annotation.tailrec
+
 import java.io._
 
 object Solution {
@@ -11,7 +21,7 @@ object Solution {
   }
   
   def angryProfessor(k: Int, a: Array[Int]): String = {
-    boolToStringRes(a.count(_ < 0) >= k, "YES", "NO")
+    boolToStringRes(a.count(_ <= 0) >= k, "NO", "YES")
   }
   
   def main(args: Array[String]) {

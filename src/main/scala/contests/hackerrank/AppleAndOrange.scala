@@ -13,14 +13,14 @@ object AppleAndOrange {
   // Complete the countApplesAndOranges function below.
   def countApplesAndOranges(s: Int, t: Int, a: Int, b: Int,
                             apples: Array[Int], oranges: Array[Int]) {
-    val noOfApples = apples.filter(e => {
+    val noOfApples = apples.count(e => {
       val d = a+e
       (d<=t) && (d>=s)
-    }).length
-    val noOfOranges = oranges.filter(e => {
+    })
+    val noOfOranges = oranges.count(e => {
       val d = b+e
       (d<=t) && (d>=s)
-    }).length
+    })
     println(noOfApples)
     println(noOfOranges)
   }
