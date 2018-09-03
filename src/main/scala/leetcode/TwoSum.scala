@@ -10,7 +10,7 @@ object TwoSum {
     twoSum(Array(1, 2, 3), 3)
   }
 
-  def twoSum(nums: Array[Int], target: Int): Array[Int] = {
+  def twoSum(nums: Array[Int], target: Int): (Int, Int) = {
     var flag = true
     val vec = for {
       i <- 0 until nums.length
@@ -20,6 +20,6 @@ object TwoSum {
       flag = false
       (i, j)
     }
-    Array(vec.head._1, vec.head._2)
+    (vec.head._1, vec.head._2)
   }
 }

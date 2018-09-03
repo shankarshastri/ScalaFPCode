@@ -1,26 +1,15 @@
+/**
+  * @author ShankarShastri
+  *         Algorithm: IceCreamParlour(https://www.hackerrank.com/challenges/icecream-parlor/problem)
+  */
 
-def twoSum(nums: Array[Int], target: Int): (Int, Int) = {
-  var flag = true
-  val vec = for {
-    i <- 0 until nums.length
-    j <- 0 until nums.length
-    if (nums(i) + nums(j) == target) && (i != j) && (flag == true)
-  } yield {
-    flag = false
-    (i, j)
-  }
-  (vec.head._1 + 1, vec.head._2 + 1)
-}
+package contests.hackerrank
 
-
-
-val a = "2 2 4 3".split(" ").map(_.toInt)
-twoSum(a, 4)
-
-
+import scala.io.StdIn._
+import scala.annotation.tailrec
 
 import java.io._
-object Solution {
+object IceCreamParlour {
   
   def twoSum(nums: Array[Int], target: Int): Array[Int] = {
     var flag = true
