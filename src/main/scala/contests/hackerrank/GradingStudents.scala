@@ -9,7 +9,7 @@ import scala.io.StdIn._
 import scala.annotation.tailrec
 
 import java.io.PrintWriter
-object Solution {
+object GradingStudents {
   def gradingStudents(grades: Array[Int]): Array[Int] = {
     grades.map{
       e => {

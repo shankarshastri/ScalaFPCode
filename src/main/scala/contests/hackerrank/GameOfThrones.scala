@@ -29,7 +29,7 @@ object GameOfThrones {
   
   def main(args: Array[String]) {
     val stdin = scala.io.StdIn
-    val printWriter = new PrintWriter(sys.env(System.out))
+    val printWriter = new PrintWriter(System.out)
     val s = stdin.readLine
     val result = gameOfThrones(s)
     printWriter.println(result)
