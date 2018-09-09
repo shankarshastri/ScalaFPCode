@@ -4,6 +4,32 @@ val updatedValue = 100
 arr
 
 
+//for(i=0;i<K;i++)
+//{
+//  cin>>p>>q>>sum;
+//  a[p]+=sum;
+//  if((q+1)<=N) a[q+1]-=sum;
+//}
+//
+//for(i=1;i<=N;i++)
+//{
+//  x=x+a[i];
+//  if(max<x) max=x;
+//
+//}
+//
+//1 2 100
+//2 5 100
+//3 4 100
+
+
+//
+//be 100 100 0 0 0. (100, 0, -100, 0, 0)
+//After the second update list will be 100 200 100 100 100. (100, 100, -100, 0, 0)
+//After the third update list will be 100 200 200 200 100. (100, 100, 0, 0, -100)
+//The required answer will be .
+
+//arr(0,0,0,0,0) => arr(100, 100, 0 , 0 , -100)
 import java.io._
 object Solution {
   

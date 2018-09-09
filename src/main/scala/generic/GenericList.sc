@@ -237,6 +237,22 @@ def foldLeftRec[A,B](as: List[A], z: B)(f:(B, A) => B) :B = {
   }
 }
 
+def scanLeft[B](list: List[B])(z: B)(op: (B,B) => B): List[B] = {
+  def scanLeftHelper(list: List[B])(z: B)(accumResult: List[B] = List[B](z)): List[B] = {
+    list match {
+      case head :: Nil => (op(head, z) :: accumResult).reverse
+      case head :: tail =>
+        val opRes = op(head, z)
+        scanLeftHelper(tail)(opRes)(opRes :: accumResult)
+    }
+  }
+  scanLeftHelper(list)(z)()
+}
+
+def scanRight[B](list: List[B])(z: B)(op: (B,B) => B): List[B] = {
+  scanLeft(list.reverse)(z)(op).reverse
+}
+
 
 foldLeftRec(List(1,2,3), 100)(_ + _)
 foldLeft(List(1,2,3))(100)(_ + _)
