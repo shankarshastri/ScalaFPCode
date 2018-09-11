@@ -22,7 +22,7 @@ val `06` = "000000"
 Set(Set(1, 2), Set(1), Set(1, 2))
 val strOfChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 val base64Map = (strOfChar zipWithIndex).map(x => (x._2, x._1)).toMap
-val res = base64("ORACLE")
+//val res = base64("ORACLE")
 val se = "ORACLEEEE"
 
 def powerSet[A](t: Set[A]): Set[Set[A]] = {
@@ -31,7 +31,6 @@ def powerSet[A](t: Set[A]): Set[Set[A]] = {
     if (t.isEmpty) ps
     else pwr(t.tail, ps ++ (ps map (_ + t.head)))
   }
-
   pwr(t, Set(Set.empty[A]))
 }
 
