@@ -10,6 +10,7 @@ val splitArr = "abc".splitAt(1)
 List(1, 2, 3)(0)
 
 5 % 5
+def loop[A](n: Int)(body: => A): Unit = (0 until n) foreach (n => body)
 
 
 @tailrec

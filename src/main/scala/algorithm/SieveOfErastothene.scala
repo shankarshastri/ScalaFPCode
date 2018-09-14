@@ -47,7 +47,6 @@ object SieveOfErastothene {
                                   map: Map[BigInt, Boolean] =
                                   Map[BigInt, Boolean]().withDefaultValue(true)): List[BigInt] = {
       if (index <= sqroot(BigDecimal(n)) && map(index)) {
-        println(index)
         sieveOfErastothenesHelper(index + 1, loopForErastothenes(n, index, map))
       } else if (index <= sqroot(BigDecimal(n))) {
         sieveOfErastothenesHelper(index + 1, map)
