@@ -82,7 +82,6 @@ getAllFactors(12)
 getAllFactors(8)
 
 def gcd(a: Int, b: Int): Int = {
-  println(a, b)
   if (a == 0) return b
   gcd(b % a, a)
 }
