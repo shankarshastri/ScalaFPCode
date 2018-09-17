@@ -30,7 +30,7 @@ object SearchImpl {
     * @tparam T
     * @return
     */
-  def binarySearch[T <: Int](list: List[T], element: T) = {
+  def binarySearch[T <: Int](list: List[T], element: T): Boolean = {
 
     @tailrec
     def binarySearchHelper(list: List[T], low: Int = 0, high: Int = list.length - 1): Boolean = {
