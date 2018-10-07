@@ -14,15 +14,6 @@ object Nqueen {
     *
     */
   def nQueens(n: Int):List[IndexedSeq[Int]] = ((0 until n).permutations filter {p =>
-  
-  
-    println("###")
-    println(p)
-    println(p.zipWithIndex.flatMap{case (c, d) =>
-      println(n+c+d, c-d)
-    
-      Seq(n + c + d, c - d)})
-    println("###")
     p.zipWithIndex.flatMap{case (c, d) => Seq(n + c + d, c - d)}.distinct.size == 2*n
   }).toList
   
