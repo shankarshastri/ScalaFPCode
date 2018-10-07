@@ -10,6 +10,8 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-actor" % "latest.milestone",
     "com.typesafe.akka" %% "akka-http" % "latest.milestone",
     "io.reactivex" %% "rxscala" % "latest.milestone",
+    "org.typelevel" %% "cats-core" % "1.4.0",
+    "io.spray" % "spray-json_2.12" % "1.3.4",
     "com.typesafe.akka" %% "akka-http-testkit" % "latest.milestone" % Test
   )
 }

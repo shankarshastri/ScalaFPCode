@@ -13,10 +13,7 @@ import scala.annotation.tailrec
   *         Algorithm: P1
   */
 
-package contests.hackerrank.codeagon
 
-import scala.io.StdIn._
-import scala.annotation.tailrec
 
 object P2 {
   def readLineToList(str: String = readLine) = str.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt).toList

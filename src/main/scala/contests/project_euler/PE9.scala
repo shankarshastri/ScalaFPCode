@@ -21,7 +21,7 @@ object PE9 {
     val t = readLine
     loopWithReadLine(BigInt(t)) {
       e => {
-        val 
+      
       }
     }
   }
