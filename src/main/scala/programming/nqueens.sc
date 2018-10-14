@@ -28,3 +28,10 @@ diagonal elements are (
 (i-1, j-1) , (i-1, j+1), (i+1, j+1),  (i+1, j-1)
 
 */
+
+
+
+
+val k = 20
+val x = 10
+val s = List(100, 200, 300).map(e => Math.max((x * e)/100, k)).sum
