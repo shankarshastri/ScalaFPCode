@@ -152,3 +152,31 @@ def `e^`(x: Double) = {
 }
 
 printf("%.4f", `e^`(20.0000))
+
+
+def foldLeft[A, B](l: List[A])(z: B)(f: (A, B) => B): B = {
+  l match {
+    case Nil => z
+    case head :: Nil => f(head, z)
+    case head :: tail =>
+      val r = f(head, z)
+      foldLeft(tail)(r)(f)
+  }
+}
+
+
+foldLeft[Int, Int](List(1,2,3))(0)(_ + _)
+
+abstract class Base
+case object A extends Base
+case object U extends Base
+case object G extends Base
+case object C extends Base
+
+object Base {
+  val fromInt: Int => Base = List(A, U, G, C)
+  //val toInt: Base => Int = Map(A -> 0, U -> 1, G -> 2, C -> 3)
+}
+
+
+

@@ -96,3 +96,11 @@ implicit def monoidInt = MonoidInt()
 implicit def monoidOption = MonoidOption()
 add(List[Int](1,2,3))
 addOption(List[Option[Int]](Option(1), Option(10)))
+
+
+
+
+case class Record(ID: String, Count: Double)
+List(Record("1", 12), Record("1", 13), Record("2", 13))
+  .groupBy(_.ID)
+  .map(e => Record(e._1, e._2.map(e=> e.Count).sum))
