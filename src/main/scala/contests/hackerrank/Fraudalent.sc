@@ -116,3 +116,9 @@ def downToZero(n: Int):Int = {
 }
 
 downToZero(877345)
+
+val k11: PartialFunction[Int, Boolean] = { case 1 =>
+  println("Hello")
+  false
+}
+k11.isDefinedAt(2)
