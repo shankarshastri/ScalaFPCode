@@ -64,3 +64,16 @@ currentMap.groupBy(_._1).map(e => (e._1, e._2.values.toList.flatten)).map(e => (
 currentMap.flatMap(e => e._2.map(a => (a.toLowerCase, e._1))) == expectedMap
 
 45f
+
+object WeekDay extends Enumeration {
+  type WeekDay = Value
+  val Mon, Tue, Wed, Thu, Fri, Sat, Sun = Value
+}
+
+
+def dupliList[A](a: A, l: Int): List[A] = {
+  (0 until l).foldLeft(List.empty[A])((acc,_) => (a :: acc))
+}
+
+
+dupliList(3, 3)
