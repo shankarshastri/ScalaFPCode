@@ -6,8 +6,8 @@ scalaVersion := "2.12.5"
 
 libraryDependencies ++= {
   Seq(
-    "com.typesafe.akka" %% "akka-stream" % "2.5.19",
-    "com.typesafe.akka" %% "akka-actor" % "2.5.19",
+    "com.typesafe.akka" %% "akka-stream" % "2.5.20",
+    "com.typesafe.akka" %% "akka-actor" % "2.5.20",
     "com.typesafe.akka" %% "akka-http" % "10.1.7",
     "io.reactivex" %% "rxscala" % "0.26.5",
     "org.typelevel" %% "cats-core" % "1.5.0",
