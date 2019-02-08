@@ -73,9 +73,36 @@ type Id[T] = T
 //loopAndTraverse[Int, Id[Int]]()
 
 
-10/3
 
-10%3
+def selectionSort(a: List[Int], sortedArray: List[Int] = List[Int]()): List[Int] = {
+  a match {
+    case Nil => sortedArray.reverse
+    case head :: Nil => (head :: sortedArray).reverse
+    case l =>
+      val min = l.min
+      val countOfMin = a.count(_ == min)
+      selectionSort(a.filter(_ != min), List.fill(countOfMin)(min) ::: sortedArray)
+  }
+}
+
+
+selectionSort(List(3,2,1,4))
 
 
 
+
+def frequentElement(l: List[Int]) = {
+  l.foldLeft(Map.empty[Int, Int])((a, b) => a.updated(b, a.getOrElse(b, 0) + 1)).toSeq
+    .sortWith((a,b) => a._2 > b._2).head._1
+}
+
+frequentElement(List(1,2,4,1,2,2))
+
+
+
+def pairs(l: List[Int], i: Int):Int = {
+  val map = l.map((_, true)).toMap.withDefaultValue(false)
+  l.count(e => map.isDefinedAt(e+i))
+}
+
+pairs(List(1 ,5 ,3 ,4 ,2), 2)
