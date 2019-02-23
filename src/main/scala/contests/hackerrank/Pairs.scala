@@ -10,7 +10,7 @@ import scala.annotation.tailrec
 
 import java.io._
 
-object Solution {
+object SolutionPairs {
   
   // Complete the pairs function below.
   def pairs(k: Int, arr: Array[Int]): Int = {
