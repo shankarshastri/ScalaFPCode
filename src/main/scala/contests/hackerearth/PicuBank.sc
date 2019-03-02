@@ -1,22 +1,35 @@
-import scala.util.Random
+//11
+//VBVNSSTSBGG
+//5
+//VGS
+//NTS
+//NGS
+//VGS
+//VGB
 
-def generateRandomList(n:Int): List[Int] = {
-  val r = new Random()
-  (1 to n).foldLeft(List[Int]())((a,_) => r.nextInt(n) :: a)
-}
 
-implicit class CountMap[T](s: List[T]) {
-  def countMap: Map[T, Int] = {
-    s.foldLeft(Map[T, Int]())((a,b) => a +
-      (b -> (a.getOrElse(b, 0) + 1))).withDefaultValue(-1)
+
+implicit class StringUtil(s: String) {
+  def countMap: Map[Char, Int] = {
+    s.foldLeft(Map[Char, Int]())((a,b) => a + (b -> (a.getOrElse(b, 0) + 1))).withDefaultValue(-1)
   }
 }
 
-def countOne(l: List[Int]): List[Int] = {
-  println(l.countMap)
-  l.countMap.filter(_._2 == 1).keys.toList
+
+val s = "VBVNSSTSBGG"
+
+
+
+
+def op(s: Map[Char, Int], order: String): (Int, Map[Char, Int]) = {
+  val res = order.map(e => s.getOrElse(e, 0)).product
+  val m = order.foldLeft(s)((a,b) => {
+    if(a.getOrElse(b, 0) > 0)
+    a + (b -> (a.getOrElse(b, 0) - 1))
+    else a
+  })
+  (res, m)
 }
 
-val l = generateRandomList(100)
-l.length
-countOne(l).length
+op(op(s.countMap, "VGS")._2, "NTS")
+
