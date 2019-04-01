@@ -8,8 +8,13 @@ implicit val system = ActorSystem("ExampleSystem")
 
 implicit val mat = ActorMaterializer() // created from `system`
 val source = Source(1 to 10)
-val sink = Sink.fold[Int, Int](0)(_ + _)
+val sink:Sink[Int, Future[Int]] = Sink.fold(0)(_ + _)
 
+val sumToNat = source.toMat(sink)(Keep.right)
 
 
 val sum: Future[Int] = source.runWith(sink)
+val s = sumToNat.run()
+while(!sum.isCompleted && !s.isCompleted) {}
+sum
+s
