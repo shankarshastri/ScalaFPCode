@@ -14,3 +14,4 @@ object Par {
   }
 }
 
+for( i <- Seq(1,2,3)) yield i
