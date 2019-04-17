@@ -2,7 +2,12 @@ name := "ScalaFPCode"
 
 version := "0.1"
 
-scalaVersion := "2.12.5"
+enablePlugins(GatlingPlugin)
+
+scalaVersion := "2.12.8"
+scalacOptions := Seq(
+  "-encoding", "UTF-8", "-target:jvm-1.8", "-deprecation",
+  "-feature", "-unchecked", "-language:implicitConversions", "-language:postfixOps")
 
 libraryDependencies ++= {
   Seq(
@@ -16,7 +21,10 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.7" % Test,
     "org.scalacheck" %% "scalacheck" % "1.14.0" % Test,
     "org.scalactic" %% "scalactic" % "3.0.7" % Test,
-    "org.scalatest" %% "scalatest" % "3.0.5" % Test
+    "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+    "org.scalaz" %% "scalaz-zio" % "1.0-RC3",
+    "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.0.3" % "test,it",
+    "io.gatling"            % "gatling-test-framework"    % "3.0.3" % "test,it"
   )
 }
 
