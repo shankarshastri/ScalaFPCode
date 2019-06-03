@@ -22,7 +22,7 @@ libraryDependencies ++= {
     "org.scalacheck" %% "scalacheck" % "1.14.0" % Test,
     "org.scalactic" %% "scalactic" % "3.0.7" % Test,
     "org.scalatest" %% "scalatest" % "3.0.5" % Test,
-    "org.scalaz" %% "scalaz-zio" % "1.0-RC3",
+    "org.scalaz" %% "scalaz-zio" % "1.0-RC5",
     "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.0.3" % "test,it",
     "io.gatling"            % "gatling-test-framework"    % "3.0.3" % "test,it"
   )
