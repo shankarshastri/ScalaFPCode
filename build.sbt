@@ -21,7 +21,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.7" % Test,
     "org.scalacheck" %% "scalacheck" % "1.14.0" % Test,
     "org.scalactic" %% "scalactic" % "3.0.7" % Test,
-    "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+    "org.scalatest" %% "scalatest" % "3.0.8" % Test,
     "org.scalaz" %% "scalaz-zio" % "1.0-RC5",
     "org.scalaz" %% "scalaz-core" % "7.2.27",
     "com.softwaremill.macwire" %% "macros" % "2.3.2" % "provided",
