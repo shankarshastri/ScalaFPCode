@@ -20,7 +20,7 @@ libraryDependencies ++= {
     "com.google.guava" % "guava" % "28.0-jre",
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.8" % Test,
     "org.scalacheck" %% "scalacheck" % "1.14.0" % Test,
-    "org.scalactic" %% "scalactic" % "3.0.7" % Test,
+    "org.scalactic" %% "scalactic" % "3.0.8" % Test,
     "org.scalatest" %% "scalatest" % "3.0.8" % Test,
     "org.scalaz" %% "scalaz-zio" % "1.0-RC5",
     "org.scalaz" %% "scalaz-core" % "7.2.27",
