@@ -17,7 +17,7 @@ libraryDependencies ++= {
     "io.reactivex" %% "rxscala" % "0.26.5",
     "org.typelevel" %% "cats-core" % "1.6.1",
     "io.spray" % "spray-json_2.12" % "1.3.5",
-    "com.google.guava" % "guava" % "27.1-jre",
+    "com.google.guava" % "guava" % "28.0-jre",
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.8" % Test,
     "org.scalacheck" %% "scalacheck" % "1.14.0" % Test,
     "org.scalactic" %% "scalactic" % "3.0.7" % Test,
