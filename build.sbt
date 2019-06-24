@@ -25,7 +25,7 @@ libraryDependencies ++= {
     "org.scalaz" %% "scalaz-zio" % "1.0-RC5",
     "org.scalaz" %% "scalaz-core" % "7.2.27",
     "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
-    "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.0.3" % "test,it",
+    "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.1.3" % "test,it",
     "io.gatling"            % "gatling-test-framework"    % "3.1.2" % "test,it"
   )
 }
