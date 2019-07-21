@@ -3,6 +3,8 @@ name := "ScalaFPCode"
 version := "0.1"
 
 enablePlugins(GatlingPlugin)
+enablePlugins(JmhPlugin)
+
 
 scalaVersion := "2.12.8"
 scalacOptions := Seq(
@@ -27,6 +29,9 @@ libraryDependencies ++= {
     "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
     "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.1.3" % "test,it",
     "io.gatling"            % "gatling-test-framework"    % "3.1.2" % "test,it"
+    "com.github.tototoshi" %% "scala-csv" % "1.3.6",
+    "com.nrinaudo" %% "kantan.csv-generic" % "0.5.1",
+    "com.github.melrief" %% "purecsv" % "0.1.1"
   )
 }
 

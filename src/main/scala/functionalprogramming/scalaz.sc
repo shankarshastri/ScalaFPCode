@@ -1,5 +1,6 @@
 import cats._
 import cats.data.{EitherT, Kleisli, OptionT, Reader, State}
+import scalaz.zio.IO
 
 import scala.concurrent.Future
 
@@ -160,7 +161,11 @@ type FutEitOpt[A] = EitherT[OptionT[Future, A], A, String]
 //}
 
 
-
+val k2 = IO.effect("h").fork
+for {
+  i <- k2
+  j <- k2.join
+} yield (i, j)
 
 
 
