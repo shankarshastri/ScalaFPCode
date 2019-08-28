@@ -13,8 +13,8 @@ scalacOptions := Seq(
 
 libraryDependencies ++= {
   Seq(
-    "com.typesafe.akka" %% "akka-stream" % "2.5.23",
-    "com.typesafe.akka" %% "akka-actor" % "2.5.23",
+    "com.typesafe.akka" %% "akka-stream" % "2.5.25",
+    "com.typesafe.akka" %% "akka-actor" % "2.5.25",
     "com.typesafe.akka" %% "akka-http" % "10.1.9",
     "io.reactivex" %% "rxscala" % "0.26.5",
     "org.typelevel" %% "cats-core" % "1.6.1",
