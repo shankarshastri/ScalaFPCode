@@ -21,7 +21,7 @@ libraryDependencies ++= {
     "io.spray" % "spray-json_2.12" % "1.3.5",
     "com.google.guava" % "guava" % "28.1-jre",
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.9" % Test,
-    "org.scalacheck" %% "scalacheck" % "1.14.0" % Test,
+    "org.scalacheck" %% "scalacheck" % "1.14.1" % Test,
     "org.scalactic" %% "scalactic" % "3.0.8" % Test,
     "org.scalatest" %% "scalatest" % "3.0.8" % Test,
     "org.scalaz" %% "scalaz-zio" % "1.0-RC5",
