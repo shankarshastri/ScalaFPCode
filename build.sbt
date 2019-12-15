@@ -15,7 +15,7 @@ libraryDependencies ++= {
   Seq(
     "com.typesafe.akka" %% "akka-stream" % "2.5.25",
     "com.typesafe.akka" %% "akka-actor" % "2.5.25",
-    "com.typesafe.akka" %% "akka-http" % "10.1.10",
+    "com.typesafe.akka" %% "akka-http" % "10.1.11",
     "com.typesafe.akka" %% "akka-remote" % "2.5.25",
     "io.reactivex" %% "rxscala" % "0.26.5",
     "org.typelevel" %% "cats-core" % "2.0.0",
