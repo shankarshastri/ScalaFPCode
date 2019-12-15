@@ -49,6 +49,20 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 
 val  k = Reader[Int, Reader[Int, Future[Int]]] (a => Reader[Int, Future[Int]](b => Future.successful(a+b)))
+val r = Reader[(Int, Int), Int](x => x._1 + x._2)
+r.run(1,2)
+import cats.data.Kleisli
+Kleisli[List, Int, Int](x => List.fill(x)(x)).run(10)
+
+
+case class K(s: Int) {
+  val k1 = 100
+  def getK1 = {
+    k1
+  }
+}
+
+Reader[K, Int](k1 => k1.k1).run(K(20))
 
 
 def mul(i: Int)(j: Int) = i*j
