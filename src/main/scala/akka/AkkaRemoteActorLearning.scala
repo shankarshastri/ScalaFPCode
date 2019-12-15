@@ -1,0 +1,5 @@
+package akka
+
+object AkkaRemoteActorLearning {
+
+}

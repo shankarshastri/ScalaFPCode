@@ -1,8 +1,8 @@
 package scalaz
 
 import scalaz.UnderstandFiber.{TreeType, constructTree}
-import scalaz.zio._
-import scalaz.zio.console._
+import zio._
+import zio.console._
 import zio.{App, Task, UIO}
 
 import scala.annotation.tailrec
