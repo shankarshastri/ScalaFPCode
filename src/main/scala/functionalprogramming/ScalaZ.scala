@@ -1,7 +1,6 @@
 package functionalprogramming
 
-import scalaz.zio._
-
+import zio._
 
 object ScalaZ extends scala.App {
 
