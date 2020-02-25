@@ -18,7 +18,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http" % "10.1.11",
     "com.typesafe.akka" %% "akka-remote" % "2.6.1",
     "io.reactivex" %% "rxscala" % "0.27.0",
-    "org.typelevel" %% "cats-core" % "2.1.0",
+    "org.typelevel" %% "cats-core" % "2.1.1",
     "io.spray" % "spray-json_2.12" % "1.3.5",
     "com.google.guava" % "guava" % "28.2-jre",
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.11" % Test,
