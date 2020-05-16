@@ -25,7 +25,7 @@ libraryDependencies ++= {
     "org.scalacheck" %% "scalacheck" % "1.14.3" % Test,
     "org.scalactic" %% "scalactic" % "3.1.0" % Test,
     "org.scalatest" %% "scalatest" % "3.0.8" % Test,
-    "dev.zio" %% "zio" % "1.0.0-RC17",
+    "dev.zio" %% "zio" % "1.0.0-RC19",
     "org.scalaz" %% "scalaz-core" % "7.2.30",
     "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
     "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.3.1" % "test,it",
