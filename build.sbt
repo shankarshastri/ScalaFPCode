@@ -27,7 +27,7 @@ libraryDependencies ++= {
     "org.scalatest" %% "scalatest" % "3.0.8" % Test,
     "dev.zio" %% "zio" % "1.0.0-RC17",
     "org.scalaz" %% "scalaz-core" % "7.2.30",
-    "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
+    "com.softwaremill.macwire" %% "macros" % "2.3.7" % "provided",
     "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.3.1" % "test,it",
     "io.gatling"            % "gatling-test-framework"    % "3.2.1" % "test,it",
     "com.github.tototoshi" %% "scala-csv" % "1.3.6",
