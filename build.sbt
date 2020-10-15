@@ -13,10 +13,10 @@ scalacOptions := Seq(
 
 libraryDependencies ++= {
   Seq(
-    "com.typesafe.akka" %% "akka-stream" % "2.6.1",
-    "com.typesafe.akka" %% "akka-actor" % "2.6.1",
+    "com.typesafe.akka" %% "akka-stream" % "2.6.10",
+    "com.typesafe.akka" %% "akka-actor" % "2.6.10",
     "com.typesafe.akka" %% "akka-http" % "10.1.11",
-    "com.typesafe.akka" %% "akka-remote" % "2.6.1",
+    "com.typesafe.akka" %% "akka-remote" % "2.6.10",
     "io.reactivex" %% "rxscala" % "0.27.0",
     "org.typelevel" %% "cats-core" % "2.1.0",
     "io.spray" % "spray-json_2.12" % "1.3.5",
@@ -24,11 +24,11 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-testkit" % "10.1.11" % Test,
     "org.scalacheck" %% "scalacheck" % "1.14.3" % Test,
     "org.scalactic" %% "scalactic" % "3.1.0" % Test,
-    "org.scalatest" %% "scalatest" % "3.0.9" % Test,
-    "dev.zio" %% "zio" % "1.0.0-RC17",
+    "org.scalatest" %% "scalatest" % "3.0.8" % Test,
+    "dev.zio" %% "zio" % "1.0.3",
     "org.scalaz" %% "scalaz-core" % "7.2.30",
     "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
-    "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.3.1" % "test,it",
+    "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.4.1" % "test,it",
     "io.gatling"            % "gatling-test-framework"    % "3.2.1" % "test,it",
     "com.github.tototoshi" %% "scala-csv" % "1.3.6",
     "com.nrinaudo" %% "kantan.csv-generic" % "0.5.1",
