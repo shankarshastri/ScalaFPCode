@@ -28,7 +28,7 @@ libraryDependencies ++= {
     "dev.zio" %% "zio" % "1.0.3",
     "org.scalaz" %% "scalaz-core" % "7.2.30",
     "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
-    "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.4.1" % "test,it",
+    "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.4.2" % "test,it",
     "io.gatling"            % "gatling-test-framework"    % "3.2.1" % "test,it",
     "com.github.tototoshi" %% "scala-csv" % "1.3.6",
     "com.nrinaudo" %% "kantan.csv-generic" % "0.5.1",
