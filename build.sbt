@@ -6,7 +6,7 @@ enablePlugins(GatlingPlugin)
 enablePlugins(JmhPlugin)
 
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.12.13"
 scalacOptions := Seq(
   "-encoding", "UTF-8", "-target:jvm-1.8", "-deprecation",
   "-feature", "-unchecked", "-language:implicitConversions", "-language:postfixOps")
