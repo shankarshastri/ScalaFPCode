@@ -30,7 +30,7 @@ libraryDependencies ++= {
     "com.softwaremill.macwire" %% "macros" % "2.3.3" % "provided",
     "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.4.1" % "test,it",
     "io.gatling"            % "gatling-test-framework"    % "3.2.1" % "test,it",
-    "com.github.tototoshi" %% "scala-csv" % "1.3.6",
+    "com.github.tototoshi" %% "scala-csv" % "1.3.7",
     "com.nrinaudo" %% "kantan.csv-generic" % "0.5.1",
     "com.github.melrief" %% "purecsv" % "0.1.1"
   )
